@@ -12,6 +12,7 @@ struct CityRow: View {
     }
 }
 
+
 struct CityRow_Previews: PreviewProvider {
     static var previews: some View {
         CityRow(city: cityRows[0])

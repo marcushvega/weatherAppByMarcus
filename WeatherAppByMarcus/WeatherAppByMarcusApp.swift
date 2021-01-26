@@ -6,7 +6,7 @@ import SwiftUI
 struct WeatherAppByMarcusApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(city: cityRows[0])
+            ContentView()
         }
     }
 }

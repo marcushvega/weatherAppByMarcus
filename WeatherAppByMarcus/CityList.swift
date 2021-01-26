@@ -4,8 +4,19 @@ import SwiftUI
 
 struct CityList: View {
     var body: some View {
-        List(cityRows) { city in
-            CityRow(city: city)
+        NavigationView {
+        VStack {
+            List(cityRows) { city in
+                CityRow(city: city)
+                NavigationLink(
+                    destination: Text("this here destination"),
+                    label: {
+                        Text("")
+                    }
+                )
+            }
+        }
+        .navigationTitle("Cities")
         }
     }
 }
