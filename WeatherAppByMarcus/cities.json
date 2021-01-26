@@ -2,14 +2,14 @@
   {
     "name": "Detroit, MI",
     "imageName": "detroit_MI",
-    "lon": 42.33208495116552
+    "lon": 42.33208495116552,
     "lat": -83.04730205956317,
     "id": 1
   },
   {
     "name": "Atlanta, GA",
     "imageName": "atlanta_GA",
-    "lon": 33.74708224240811
+    "lon": 33.74708224240811,
     "lat": -84.3876534636526,
     "id": 2
   },

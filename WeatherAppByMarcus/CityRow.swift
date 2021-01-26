@@ -2,19 +2,18 @@
 
 import SwiftUI
 
-struct CityTemperatureRow: View {
+struct CityRow: View {
     var city: City
     var body: some View {
         HStack {
-            // might put static images of city skylines here
             Text(verbatim: city.name)
             Spacer()
         }
     }
 }
 
-struct CityTemperatureRow_Previews: PreviewProvider {
+struct CityRow_Previews: PreviewProvider {
     static var previews: some View {
-        CityTemperatureRow()
+        CityRow(city: cityRows[0])
     }
 }
