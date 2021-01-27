@@ -1,10 +1,11 @@
 //__FILENAME__  was created on __DATE__
 
 import SwiftUI
+import Alamofire
 
 struct ContentView: View {
     var body: some View {
-       	 	CityList()
+        CityList()
     }
 }
 
