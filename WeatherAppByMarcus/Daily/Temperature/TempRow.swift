@@ -3,20 +3,37 @@
 import SwiftUI
 
 struct TempRow: View {
-    @State var dailyTemperatures: [Temperatures] = []
+    let epochTime: Int
+    var dailyTemperature: Temperatures
     var body: some View {
-        List(dailyTemperatures) { temps in
-            Text("Min Temp: ")
-            let strTemp = String(temps.min)
-            Text(strTemp)
-            Spacer()
-            
+        VStack {
+            HStack {
+                // insert timestamp here
+                // change epoch time to human-readable format
+                
+                let dt: String = SomeClass().changeEpochTimeToHumanReadable(epochTime: epochTime)
+                
+                Text("\(dt)")
+                
+                Spacer()
+                Text("Min: ")
+                    .alignmentGuide(.leading, computeValue: { d in d[.leading] })
+                
+                Text(verbatim: String(dailyTemperature.min))
+                Spacer()
+                
+                Text("Max: ")
+                    .alignmentGuide(.trailing, computeValue: { d in d[.trailing] })
+                Text(verbatim: String(dailyTemperature.max))
+                Spacer()
+            }
         }
+        
     }
 }
 
-struct TempRow_Previews: PreviewProvider {
-    static var previews: some View {
-        TempRow()
-    }
-}
+//struct TempRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TempRow()
+//    }
+//}

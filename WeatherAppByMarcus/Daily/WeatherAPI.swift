@@ -38,5 +38,16 @@ class SomeClass {
         	}
         }
     }
+    
+    func changeEpochTimeToHumanReadable(epochTime: Int) -> String {
+        // insert timestamp here
+        // change epoch time to human-readable format
+        let date = Date(timeIntervalSince1970: TimeInterval(epochTime))
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "en_US")
+        df.setLocalizedDateFormatFromTemplate("MMMMd")
+        
+        return df.string(from: date)
+    }
 
 }

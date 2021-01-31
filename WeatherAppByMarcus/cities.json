@@ -2,71 +2,71 @@
   {
     "name": "Detroit, MI",
     "imageName": "detroit_MI",
-    "lon": 42.33208495116552,
-    "lat": -83.04730205956317,
+    "lat": 42.33208495116552,
+    "lon": -83.04730205956317,
     "id": 1
   },
   {
     "name": "Atlanta, GA",
     "imageName": "atlanta_GA",
-    "lon": 33.74708224240811,
-    "lat": -84.3876534636526,
+    "lat": 33.74708224240811,
+    "lon": -84.3876534636526,
     "id": 2
   },
   {
     "name": "Dubai, United Arab Emirates",
     "imageName": "dubai_UAE",
-    "lon": 25.148782284207734,
-    "lat": 55.24351480712645,
+    "lat": 25.148782284207734,
+    "lon": 55.24351480712645,
     "id": 3
   },
   {
     "name": "St Louis, MI",
     "imageName": "stLouis_MI",
-    "lon": 43.40761267103385,
-    "lat": -84.60738362652206,
+    "lat": 43.40761267103385,
+    "lon": -84.60738362652206,
     "id": 4
   },
   {
     "name": "Memphis, TN",
     "imageName": "memphis_TN",
-    "lon": 35.1254940468515,
-    "lat": -89.97494022953693,
+    "lat": 35.1254940468515,
+    "lon": -89.97494022953693,
     "id": 5
   },
   {
     "name": "Dallas, TX",
     "imageName": "dallas_TX",
-    "lon": 32.77762611047084,
-    "lat": -96.79900174912741,
+    "lat": 32.77762611047084,
+    "lon": -96.79900174912741,
     "id": 6
   },
   {
     "name": "London, United Kingdom",
     "imageName": "london_UK",
-    "lon": 51.505353936334,
-    "lat": -0.13842216881474156,
+    "lat": 51.505353936334,
+    "lon": -0.13842216881474156,
     "id": 7
   },
   {
     "name": "Mexico City, Mexico",
     "imageName": "mexicoCity_MX",
-    "lon": 19.409462088085565,
-    "lat": -99.13538262776804,
+    "lat": 19.409462088085565,
+    "lon": -99.13538262776804,
     "id": 8
   },
   {
     "name": "Oklahoma City, OK",
     "imageName": "oklahomaCity_OK",
-    "lon": 35.472259141691325,
-    "lat": -97.54926853199196,
+    "lat": 35.472259141691325,
+    "lon": -97.54926853199196,
     "id": 9
   },
   {
     "name": "Chicago, IL",
     "imageName": "chicago_IL",
-    "lon": 41.80370393272535,
-    "lat": -87.60085650951005,
+    "lat": 41.80370393272535,
+    "lon": -87.60085650951005,
     "id": 10
   }
   

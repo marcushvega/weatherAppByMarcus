@@ -17,7 +17,9 @@ struct SingleCityView: View {
                     	self.weather = weather
             		}
         		})
-            
+            if let unwrapped = weather {
+                TempList(dailyWeather: unwrapped)
+            }
         }
     }
 }
