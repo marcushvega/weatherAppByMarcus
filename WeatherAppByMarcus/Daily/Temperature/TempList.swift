@@ -7,6 +7,7 @@ struct TempList: View {
     var body: some View {
         VStack {
             Text("Minimum & Maximum Temperatures")
+                .bold()
             List(dailyWeather.daily) { weather in
                 TempRow(epochTime: weather.dt, dailyTemperature: weather.temp)
             }

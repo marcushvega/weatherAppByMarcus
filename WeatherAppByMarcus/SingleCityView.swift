@@ -10,6 +10,8 @@ struct SingleCityView: View {
     var body: some View {
         VStack {
         	Text(verbatim: city.name)
+                .bold()
+                .font(.system(size: 32))
             	.onAppear(perform: {
                 	let forThisUseOnly: SomeClass = SomeClass.init()
                 	forThisUseOnly.setLonLat(longitude: city.lon, latitude: city.lat)
