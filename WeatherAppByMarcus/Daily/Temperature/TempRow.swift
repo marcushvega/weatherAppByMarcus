@@ -3,8 +3,15 @@
 import SwiftUI
 
 struct TempRow: View {
+    @State var dailyTemperatures: [Temperatures] = []
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(dailyTemperatures) { temps in
+            Text("Min Temp: ")
+            let strTemp = String(temps.min)
+            Text(strTemp)
+            Spacer()
+            
+        }
     }
 }
 

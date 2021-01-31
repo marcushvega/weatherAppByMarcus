@@ -4,46 +4,39 @@ import Foundation
 import Alamofire
 
 //let dailyRows: [Weather] = processWeatherJSON(city: "Detroit")
-let bsALL = processWeatherJSON(city: "Detroit")
+//let weeklyWeather: Weather = processWeatherJSON(city: "Detroit")
 
-private func processWeatherJSON(city: String) -> String {
-    let parameters = ["lat": "33.441792", "lon": "-94.037689", "units": "imperial", "exclude": "hourly,minutely", "appid": "a9535ee273662ee0990a9f796f4678a5"]
+class SomeClass {
+    private var longitude: Double = 0.0
+    private var latitude: Double = 0.0
     
-    AF.request("https://api.openweathermap.org/data/2.5/onecall", parameters: parameters).response { (response) in
-        debugPrint(response)
-        guard let data = response.data else {return}
+    func setLonLat(longitude: Double, latitude: Double) {
+        self.longitude = longitude
+        self.latitude = latitude
+    }
+    
+    func processWeatherJSON(returnMyWeather: @escaping (Weather) -> ()) {
+    	let parameters = ["lat": String(latitude), "lon": String(longitude), "units": "imperial", "exclude": "hourly,minutely", "appid": "49fa03f8287ea3774b8ad46a17f8ae8f"]
+    
+   		AF.request("https://api.openweathermap.org/data/2.5/onecall", parameters: parameters).response { (response) in
+        	debugPrint(response)
+        	guard let data = response.data else {return}
         
-        do {
-            let daily = JSONDecoder()
-            let dailies = try daily.decode(Weather.self, from: data)
-            print("dailies == \(dailies)")
+        	do {
+          	  	let decodeTheStuff = JSONDecoder()
+            	let sevenDayWeather = try decodeTheStuff.decode(Weather.self, from: data)
+//            	print("weeklyWeather == \(weeklyWeather)")		this is here for debugging purposes
             
-        }
-        catch {
-            fatalError("LOOK AT THIS ERROR:\n\(error)")
+            	// this apparently allows us to interact with the app while running the api call
+            	DispatchQueue.main.async {
+                	// makes the json be able to be sent somewhere outside of the AF request
+                	returnMyWeather(sevenDayWeather)
+            	}
+        	}
+        	catch {
+            	fatalError("LOOK AT THIS ERROR:\n\(error)")
+        	}
         }
     }
-    return "ffffffffff"
-}
 
-//private func processJSONData<T: Decodable>(filename: String) -> T {
-//    let data: Data
-//    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-//        else {
-//        fatalError("Couldn't find \(filename) in main bundle.")
-//    }
-//    do {
-//        data = try Data(contentsOf: file)
-//    }
-//    catch {
-//        fatalError("Couldn't load \(filename) from main bunle: \n\(error)")
-//    }
-//
-//    do {
-//        let decoder = JSONDecoder()
-//        return try decoder.decode(T.self, from: data)
-//    }
-//    catch {
-//        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-//    }
-//}
+}

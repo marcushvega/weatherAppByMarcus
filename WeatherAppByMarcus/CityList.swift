@@ -9,7 +9,7 @@ struct CityList: View {
             List(cityRows) { city in
                 CityRow(city: city)
                 NavigationLink(
-                    destination: SingleCityView(),
+                    destination: SingleCityView(city: city),
                     label: {
                         Text("")
                     }

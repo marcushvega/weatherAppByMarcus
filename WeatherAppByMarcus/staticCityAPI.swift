@@ -26,7 +26,7 @@ private func bs() {
 
 private func processJSONData<T: Decodable>(filename: String) -> T {
     
-    bs()
+//    bs()
     
     let data: Data
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
