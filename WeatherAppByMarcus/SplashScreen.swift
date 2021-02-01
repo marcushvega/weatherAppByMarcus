@@ -7,6 +7,10 @@ struct SplashScreen: View {
         ZStack {
             Color("Background").edgesIgnoringSafeArea(.all)
             Image("hexPurple8142f8")
+            
+            // Text doesn't show up and idk why
+            Text("SPLASH SCREEN!")
+                .font(.system(size: 44)).bold()
         }
     }
 }
