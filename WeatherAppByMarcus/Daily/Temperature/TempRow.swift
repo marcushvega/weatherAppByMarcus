@@ -19,18 +19,28 @@ struct TempRow: View {
                 Text("Min: ")
                     .alignmentGuide(.leading, computeValue: { d in d[.leading] })
                 
-                Text(verbatim: String(dailyTemperature.min))
+                Text(verbatim: getFormattedTemperature(temperature: dailyTemperature.min)+"F")
                 Spacer()
                 
                 Text("Max: ")
                     .alignmentGuide(.trailing, computeValue: { d in d[.trailing] })
-                Text(verbatim: String(dailyTemperature.max))
+                Text(verbatim: getFormattedTemperature(temperature: dailyTemperature.max)+"F")
                 Spacer()
             }
         }
         
     }
 }
+
+//func getFormattedTemperature(temperature: Double) -> String {
+//    let temperature = Measurement(value: temperature, unit: UnitTemperature.fahrenheit)
+//    let measurementFormatter = MeasurementFormatter()
+//    measurementFormatter.unitStyle = .short
+//    measurementFormatter.numberFormatter.maximumFractionDigits = 0
+//    measurementFormatter.unitOptions = .naturalScale
+//
+//    return measurementFormatter.string(from: temperature)
+//}
 
 //struct TempRow_Previews: PreviewProvider {
 //    static var previews: some View {
